@@ -18,6 +18,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       titleTemplate="Megha Dhiman | %s"
       titleDefault="Megha Dhiman"
       description="See how Megha can help with your mental and emotional wellbeing"
+      twitter={{
+        card: "summary_large_image",
+      }}
       openGraph={{
         basic: {
           title: "Megha Dhiman | Psychotherapist",
@@ -25,6 +28,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           image: profileHeadshot.src,
           url: canonicalURL,
         },
+
         optional: {
           description:
             "See how Megha can help with your mental and emotional wellbeing",
