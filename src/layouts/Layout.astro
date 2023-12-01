@@ -7,16 +7,52 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='description' content='Astro description' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='generator' content={Astro.generator} />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <style is:global>
+      /** Montserrat Regular **/
+      @font-face {
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src:
+          url("/fonts/Montserrat-Regular.woff2") format("woff2"),
+          url("/fonts/Montserrat-Regular.woff") format("woff");
+      }
+
+      /** Montserrat Regular-Italic **/
+      @font-face {
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+        src:
+          url("/fonts/Montserrat-Italic.woff2") format("woff2"),
+          url("/fonts/Montserrat-Italic.woff") format("woff");
+      }
+
+      /** Montserrat SemiBold **/
+      @font-face {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+        src:
+          url("/fonts/Montserrat-SemiBold.woff2") format("woff2"),
+          url("/fonts/Montserrat-SemiBold.woff") format("woff");
+      }
+    </style>
   </head>
-  <body class='bg-pink-300 center'>
+  <body
+    class="mx-6 my-0 min-h-screen bg-pale text-lg text-dark lg:mx-auto lg:my-0 lg:max-w-4xl lg:text-base"
+  >
     <slot />
   </body>
 </html>
