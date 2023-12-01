@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -22,6 +23,7 @@ const { title } = Astro.props;
           title: "Megha Dhiman | Psychotherapist",
           type: "website",
           image: profileHeadshot.src,
+          url: canonicalURL,
         },
         optional: {
           description:
